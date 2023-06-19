@@ -1,0 +1,38 @@
+@tailwind base;
+
+@tailwind components;
+
+@font-face {
+  font-family: 'titilliumWeb';
+  src: url(assets/font/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Net-Puzzle';
+  src: url(assets/font/FontsFree-Net-Puzzle.ttf);
+}
+
+
+
+@tailwind utilities;
+
+.translate--50\/100-0Xrotate90{
+  transform: rotate(90deg) translate(-50%, 0%);
+}
+@responsive{
+  .translate-none{
+    transform: none;
+  }
+  .translate--90\/100-0{
+    transform: translate(-90%, 0);
+  }
+  .translate-90\/100-0{
+    transform: translate(90%, 0);
+  }
+  .translate-0--50\/100 {
+    transform: translate(0,-50%);
+  }
+}
+.text-last-center{
+  text-align-last:center;
+}

@@ -1,0 +1,153 @@
+<html>
+
+<head>
+  <script src="libraries/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <script src="Puzzle.js"></script>
+  <script src="wordfind.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins" />
+
+</head>
+
+<body>
+  <input id="puzzle-width" type="text">
+  X
+  <input id="puzzle-height" type="text">
+  <button id="generate">Generate</button>
+  <button id="solve">Solve</button>
+  <button id="showBtn">Orientations</button>
+  <button id="saveImage">Save Image</button>
+  <button id="saveFullText">Save Text Puzzle</button>
+  <button id="saveText">Save Text Answer</button>
+
+
+  <div id="get-words">
+    <input id="header-input" type="text" placeholder="Header">
+  </div>
+
+  <textarea id="text-input" cols="20" rows="5"></textarea>
+  <button id="upload-text">Upload & Generate</button>
+
+  <label for="check">
+    <input style="margin: 0;" id="show-grid" type="checkbox" name="check" checked>
+    Show grid
+  </label>
+
+  <div id="orientation">
+    <p> Select orientations</p>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Right &#x2192;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Left &#x2190;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Down &#x2193;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Up &#x2191;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Up Right &#x2198;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Down Right &#x2197;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Down Left &#x2199;</label>
+    <label><input type="checkbox" class="orientation-checkbox" checked> Up Left &#x2196;</label>
+    <br>
+    <button id="saveBtn">Save</button>
+  </div>
+
+  <div id="canvasContainer" style="display: flex; flex-direction: column; align-items: center; width: fit-content;">
+    <div id="header" style="margin-bottom: 10px; font-size: 20px;"></div>
+  </div>
+
+  <div id="list-container">
+    <ul id="word-list"></ul>
+  </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+  modal = document.getElementById('orientation')
+  showBtn = document.getElementById('showBtn')
+  showBtn.onclick = function () {
+    modal.style.display = "block";
+  }
+
+  header_input = document.getElementById('header-input')
+
+  header_input.onchange = function () {
+    document.getElementById("header").innerHTML = header_input.value;
+  }
+
+
+
+</script>
+
+
+<style>
+  ul {
+    column-count: 3;
+    width: 90%;
+    list-style-type: none;
+    font-size: 20;
+    padding: 0;
+    align-items: center;
+  }
+
+  ul li {
+    text-align: center;
+  }
+
+
+  #list-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  #header-input {
+    width: 200px;
+  }
+
+
+
+
+  html,
+  body {
+    font-family: 'Poppins';
+  }
+
+  input[type='text'] {
+    height: 30px;
+    width: 40px;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+
+  label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+  }
+
+  input[type='checkbox'] {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin: 0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+  }
+
+
+  #orientation {
+    display: none;
+    font-size: 20px;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+    left: 100px;
+    background-color: rgb(240, 138, 138);
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+  }
+</style>

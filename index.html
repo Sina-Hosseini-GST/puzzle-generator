@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzle Generator - Create Your Own Printable Puzzles</title>
+  <meta name="description" content="Puzzlegenerators is a website for everyone who's interested in making their own original puzzles. You can create Mazes, Sudoku, Word Search and Crossword puzzles." />
+  <!-- ****** faviconit.com favicons ****** -->
+	<link rel="shortcut icon" href="css/assets/img/faviconit/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="css/assets/img/faviconit/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="css/assets/img/faviconit/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="css/assets/img/faviconit/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="css/assets/img/faviconit/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="css/assets/img/faviconit/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="css/assets/img/faviconit/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="css/assets/img/faviconit/favicon-16.png">
+	<link rel="apple-touch-icon" href="css/assets/img/faviconit/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="css/assets/img/faviconit/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="css/assets/img/faviconit/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="css/assets/img/faviconit/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="css/assets/img/faviconit/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="css/assets/img/faviconit/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="css/assets/img/faviconit/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="css/assets/img/faviconit/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="css/assets/img/faviconit/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="css/assets/img/faviconit/favicon-144.png">
+	<meta name="msapplication-config" content="css/assets/img/faviconit/browserconfig.xml">
+	<!-- ****** faviconit.com favicons ****** -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <meta property="og:site_name " content="Puzzle Generator - Create Your Own Printable Puzzles" />
+	<meta property="og:title" content="Puzzle Generator - Create Your Own Printable Puzzles" />
+  <meta property="og:description" content="Puzzlegenerators is a website for everyone who's interested in making their own original puzzles. You can create Mazes, Sudoku, Word Search and Crossword puzzles." />
+  <!-- Designed and developed by Sina Hosseini -->
+</head>
+<body class="font-titillium">
+  <div class="xl1:pl-100/6">
+    <div class="fixed left-0 inset-y-0 w-1/6 bg-c-gray xl1:block hidden">
+      <h1 class="text-white text-5xl font-NetPuzzle h-15/100">
+        <a href="index.html" class="flex justify-center items-center h-full w-full">
+          PG
+        </a>
+      </h1>
+      <nav class="text-white h-65/100">
+        <ul class="h-full xl2:text-lg xl1:text-md">
+          <li class="cursor-pointer border-b border-t border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+            <a href="#section-1" class="flex items-center justify-center w-full h-full">
+              Maze
+            </a>
+          </li>
+          <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+            <a href="#section-2" class="flex items-center justify-center w-full h-full">
+              Sudoku
+            </a>
+          </li>
+          <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+            <a href="#section-3" class="flex items-center justify-center w-full h-full">
+              Crossword
+            </a>
+          </li>
+          <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+            <a href="#section-4" class="flex flex-col items-center justify-center w-full h-full">
+              <span>Word Search</span>
+              <span class="text-base">v1</span>
+            </a>
+          </li>
+          <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+            <a href="#section-5" class="flex flex-col items-center justify-center w-full h-full">
+              <span>Word Search</span>
+              <span class="text-base">v2</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="absolute bottom-0">
+        <p class="xl2:text-sm xl1:text-xs text-white text-center px-10 xl2:pb-8 xl1:pb-6">
+          <small>Copyright© puzzlegenerators.com 2020. All Rights Reserved.</small>
+        </p>
+      </div>
+    </div>
+    <div class="fixed top-0 inset-x-0 lg4:h-16 lg2:h-14 h-12 xl1:hidden z-10">
+      <div class="flex h-full">
+        <div class="lg1:w-4/5 sm1:w-3/4 w-2/3 text-white bg-c-blue-11 font-NetPuzzle lg4:pl-8 lg2:pl-6 pl-4">
+          <h1 class="h-full lg4:text-5xl lg2:text-4.5xl text-4xl">
+            <a href="index.html">
+              PG
+            </a>
+          </h1>
+        </div>
+        <div class="lg1:w-1/5 sm1:w-1/4 w-1/3">
+          <button class="rounded-none focus:outline-none w-full h-full bg-c-yellow-3 hover:bg-pure-yellow transition-colors duration-200 flex justify-center items-center" id="open-menu-btn">
+            <div class="sm1:mr-3 mr-2">
+              <img src="css/assets/img/icons/menu_list.png" alt="Menu icon" class="lg4:w-8 lg2:w-6 w-5 h-auto">
+            </div>
+            <span class="lg4:text-2xl lg2:text-xl text-lg">Menu</span>
+          </button>
+          <div class="fixed inset-y-0 lg1:-right-20/100 sm1:-right-25/100 -right-1/3 lg1:w-1/5 sm1:w-1/4 w-1/3 bg-c-gray flex flex-col" id="menu-cnt" style="transition: .5s right;">
+            <div class="lg4:h-16 lg2:h-14 h-12">
+              <button class="rounded-none focus:outline-none w-full h-full bg-gray-200 hover:bg-white transition-colors duration-200 flex justify-center items-center" id="close-menu-btn">
+                 <div class="sm1:mr-3 mr-2">
+                  <img src="css/assets/img/icons/close.png" alt="Close icon" class="lg4:w-8 lg2:w-6 w-5 h-auto">
+                </div>
+                <span class="lg4:text-2xl lg2:text-xl text-lg">Close</span>
+              </button>
+            </div>
+            <nav class="flex-1 text-white">
+              <ul class="h-full lg5:text-lg lg4:text-md lg2:text-base text-sm">
+                <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+                  <a href="#section-1" class="flex items-center justify-center w-full h-full">
+                    Maze
+                  </a>
+                </li>
+                <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+                  <a href="#section-2" class="flex items-center justify-center w-full h-full">
+                    Sudoku
+                  </a>
+                </li>
+                <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+                  <a href="#section-3" class="flex items-center justify-center w-full h-full">
+                    Crossword
+                  </a>
+                </li>
+                <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+                  <a href="#section-4" class="flex flex-col items-center justify-center w-full h-full">
+                    <span>Word Search</span>
+                    <span class="text-base">v1</span>
+                  </a>
+                </li>
+                <li class="cursor-pointer border-b border-c-gray-4 hover:bg-c-gray-3 hover:text-gray-800 transition-colors duration-200 text-center h-20/100">
+                  <a href="#section-5" class="flex flex-col items-center justify-center w-full h-full">
+                    <span>Word Search</span>
+                    <span class="text-base">v2</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="flex absolute inset-0">
+        <div class="w-2/12 bg-gray-100"></div>
+        <div class="w-2/12 bg-c-gray-3"></div>
+        <div class="w-7/12 bg-gray-100"></div>
+        <div class="w-1/12 bg-c-gray-3"></div>
+      </div>
+      <article id="section-1" class="relative xl1:pt-0 lg4:pt-16 lg2:pt-14 pt-12 xl2:pb-22 xl1:pb-16">
+          <div class="absolute inset-0 opacity-25">
+            <div class="w-full flex flex-col h-full">
+              <div class="w-7/12 bg-gray-400 h-10/100"></div>
+              <div class="h-50/100"></div>
+              <div class="w-6/12 bg-gray-500 h-20/100"></div>
+              <div class="w-5/12 bg-gray-400 h-20/100"></div>
+            </div>
+          </div>
+          <div class="flex lg1:flex-row flex-col relative">
+              <div class="flex lg1:flex-col flex-row lg1:justify-start justify-between">
+                <div class="bg-gray-700 relative xl3:w-128 xl3:h-112 xl2:w-120 xl2:h-104 xl1:w-112 xl1:h-96 lg5:w-120 lg5:h-104 lg4:w-112 lg4:h-96 lg3:w-96 lg3:h-80 lg2:w-88 lg2:h-72 lg1:w-76 lg1:h-64 sm2:w-1/2 w-3/5 info-odd-bg">
+                  <div class="w-full absolute lg1:left-20/100 left-10/100 top-50/100 translate-0--50/100">
+                    <img src="css/assets/img/maze.png" alt="Maze image">
+                  </div>
+                </div>
+                <div class="flex lg1:flex-row flex-col lg1:items-stretch items-end windows-group">
+                  <div class="xl2:w-40 xl2:h-40 xl1:w-32 xl1:h-32 lg5:w-40 lg5:h-40 lg4:w-32 lg4:h-32 w-24 h-24 bg-gray-900 text-white xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-sm sm2:text-xs text-2xs flex flex-col justify-center items-center">
+                      <span class="font-bold">Suitable for</span>
+                      <span>All ages!</span>
+                  </div>
+                  <div class="xl2:w-28 xl2:h-28 xl1:w-20 xl1:h-20 lg5:w-28 lg5:h-28 lg4:w-20 lg4:h-20 w-16 h-16 bg-c-red text-white xl2:text-base xl1:text-sm lg5:text-base lg4:text-sm lg2:text-xs sm2:text-2xs text-3xs flex flex-col justify-center items-center lg1:transform-none translate--90/100-0">
+                      <span class="font-bold">Difficulty</span>
+                      <span>Multiple</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm relative">
+                <div class="absolute left-0 top-0 text-white bg-black xl2:w-40 xl1:w-36 lg5:w-40 lg4:w-36 w-28 lg4:h-10 h-8 lg1:flex hidden justify-center items-center">
+                  <div class="mr-2">
+                    <img src="css/assets/img/icons/information.png" alt="Info icon" class="lg4:w-4 w-3 h-auto">
+                  </div>
+                  <div>
+                    <span class="xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm font-bold">Information</span>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="h-27 w-7 text-white bg-gray-900 lg1:hidden flex flex-col justify-between items-center">
+                    <div class="p-2">
+                      <img src="css/assets/img/icons/information.png" alt="Info icon" class="w-3 h-auto">
+                    </div>
+                    <div class="translate--50/100-0Xrotate90">
+                      <span class="text-sm font-bold">Information</span>
+                    </div>
+                  </div>
+                  <div class="lg1:flex-auto flex-1 xl3:pr-16 xl3:pl-41.6 xl2:pr-12 xl2:pl-36 xl1:pr-10 xl1:pl-32.4 lg5:pr-12 lg5:pl-36 lg4:pr-10 lg4:pl-32.4 lg3:pr-8 lg3:pl-27.2 lg2:pr-6 lg2:pl-23.6 lg1:pr-6 lg1:pl-21.2 sm2:px-8 px-4 xl2:pt-28 xl1:pt-20 lg5:pt-28 lg4:pt-20 lg3:pt-16 lg1:pt-12 sm2:pt-6 pt-2">
+                    <h1 class="font-bold xl2:text-3xl xl1:text-2xl lg5:text-3xl lg4:text-2xl lg2:text-xl text-lg xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      Maze Generator
+                    </h1>
+                    <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1 italic">
+                      The objective of the mazes is to find a path from one end to the other.
+                    </p>
+                    <p>
+                      You can use this Maze Generator to generate multiple difficulties from easy, medium and hard based on the grid size. You can also generate either square or rectangular grids for these mazes.
+                    </p>
+                    <button class="rounded-none focus:outline-none bg-c-red-5 text-white hover:bg-c-red-3 transition-colors duration-200 flex ml-auto xl2:mt-28 xl1:mt-20 lg5:mt-28 lg4:mt-20 lg3:mt-16 lg2:mt-12 lg1:mt-10 mt-6">
+                        <a href="maze.html" class="xl2:px-4 xl1:px-3 lg5:px-4 lg4:px-3 lg4:py-2 px-2 py-1">
+                          Generate Puzzle!
+                        </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </article>
+
+      <article id="section-2" class="relative xl1:pt-0 lg4:pt-16 lg2:pt-14 pt-12 xl2:pb-22 xl1:pb-16">
+        <div class="absolute inset-0 opacity-25">
+          <div class="w-full h-full flex flex-col items-end">
+            <div class="h-5/100"></div>
+            <div class="w-9/12 bg-gray-300 h-55/100"></div>
+            <div class="w-7/12 bg-gray-200 h-20/100"></div>
+            <div class="w-5/12 bg-gray-300 h-10/100"></div>
+          </div>
+        </div>
+        <div class="relative flex lg1:flex-row flex-col">
+                 <div class="lg1:order-1 order-2 flex flex-1">
+                   <div class="flex">
+                     <div class="lg4:w-2 w-1 h-50/100 bg-gray-600"></div>
+                     <div class="xl2:h-34 xl1:h-32 lg5:h-34 lg4:h-32 lg2:h-30 h-27 lg4:w-9 w-7 lg4:mt-5 mt-2 text-white bg-gray-900 flex flex-col justify-between items-center">
+                       <div class="p-2">
+                         <img src="css/assets/img/icons/information.png" alt="Info icon" class="lg4:w-4 w-3 h-auto">
+                       </div>
+                       <div class="translate--50/100-0Xrotate90">
+                         <span class="xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm font-bold">Information</span>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="flex-1 xl3:pl-10 xl3:pr-26 xl2:pl-8 xl2:pr-24 xl1:pl-8 xl1:pr-20 lg5:pl-8 lg5:pr-24 lg4:pl-8 lg4:pr-20 lg2:pl-6 lg2:pr-18 lg1:pl-4 lg1:pr-16 sm2:px-8 px-4 xl2:pt-12 xl1:pt-8 lg5:pt-12 lg4:pt-8 lg3:pt-6 lg1:pt-4 sm2:pt-8 pt-6 xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm">
+                     <h1 class="font-bold xl2:text-3xl xl1:text-2xl lg5:text-3xl lg4:text-2xl lg2:text-xl text-lg xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                       Sudoku Generator
+                     </h1>
+                     <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1 italic">
+                       The objective of the Sudoku is to fill a grid so that each column and each rowcontains the digits based on the size of the grid.
+                     </p>
+                     <p class="mb-1">
+                       You can use this Sudoku Generator to generate multiple difficulties and grid sizes. You can generate the following grid sizes:
+                     </p>
+                     <ul class="text-gray-900 font-bold xl2:text-base xl1:text-sm lg5:text-base text-sm xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                       <li>
+                         <span>3x3</span>
+                       </li>
+                       <li>
+                         <span>6x6</span>
+                       </li>
+                       <li>
+                         <span>9x9</span>
+                       </li>
+                     </ul>
+                     <p class="mb-1">
+                       You can generate the following difficulties for each grid:
+                     </p>
+                     <ul class="text-gray-900 font-bold xl2:text-base xl1:text-sm lg5:text-base text-sm">
+                       <li>
+                         <span>Easy</span>
+                       </li>
+                       <li>
+                         <span>Medium</span>
+                       </li>
+                       <li>
+                         <span>Hard</span>
+                       </li>
+                       <li>
+                         <span>Very hard</span>
+                       </li>
+                     </ul>
+                     <button class="rounded-none focus:outline-none bg-c-green-9 text-white hover:bg-c-green-10 transition-colors duration-200 flex ml-auto">
+                       <a href="sudoku.html" class="xl2:px-4 xl1:px-3 lg5:px-4 lg4:px-3 lg4:py-2 px-2 py-1">
+                         Generate Puzzle!
+                       </a>
+                     </button>
+                   </div>
+                 </div>
+                 <div class="lg1:order-2 order-1 flex lg1:flex-col flex-row lg1:justify-start justify-between">
+                    <div class="lg1:order-1 order-2 bg-gray-700 relative xl3:w-136 xl3:h-64 xl2:w-124 xl2:h-52 xl1:w-116 xl1:h-48 lg5:w-124 lg5:h-52 lg4:w-116 lg4:h-48 lg3:w-100 lg3:h-44 lg2:w-92 lg2:h-40 lg1:w-80 lg1:h-36 sm2:w-55/100 w-3/5 info-even-bg">
+                      <div class="w-full absolute xl2:top-16 xl2:right-16 xl1:top-12 xl1:right-12 lg5:top-16 lg5:right-16 lg1:top-12 lg1:right-12 top-6 right-6">
+                        <img src="css/assets/img/sudoku.png" alt="Sudoku image">
+                      </div>
+                    </div>
+                    <div class="lg1:order-2 order-1 lg4:mt-28 lg1:mt-20 flex lg1:flex-row flex-col lg1:justify-end lg1:pt-0 pt-2 windows-group">
+                      <div class="lg1:order-1 order-2 xl2:w-40 xl2:h-40 xl1:w-32 xl1:h-32 lg5:w-40 lg5:h-40 lg4:w-32 lg4:h-32 w-24 h-24 bg-c-green-10 text-white xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-sm sm2:text-xs text-2xs flex flex-col justify-center items-center lg4:mt-10 lg1:mt-6">
+                         <span class="font-bold">Suitable for</span>
+                         <span>All ages!</span>
+                      </div>
+                      <div class="lg1:order-2 order-1 xl2:w-28 xl2:h-28 xl1:w-20 xl1:h-20 lg5:w-28 lg5:h-28 lg4:w-20 lg4:h-20 w-16 h-16 bg-gray-900 text-white xl2:text-base xl1:text-sm lg5:text-base lg4:text-sm lg2:text-xs sm2:text-2xs text-3xs flex flex-col justify-center items-center">
+                         <span class="font-bold">Difficulty</span>
+                         <span>Multiple</span>
+                      </div>
+                    </div>
+                 </div>
+        </div>
+      </article>
+
+      <article id="section-3" class="relative xl1:pt-0 lg4:pt-16 lg2:pt-14 pt-12 xl2:pb-22 xl1:pb-16">
+          <div class="absolute inset-0 opacity-25">
+            <div class="w-full flex flex-col h-full">
+              <div class="w-7/12 bg-gray-400 h-10/100"></div>
+              <div class="h-50/100"></div>
+              <div class="w-6/12 bg-gray-500 h-20/100"></div>
+              <div class="w-5/12 bg-gray-400 h-20/100"></div>
+            </div>
+          </div>
+          <div class="flex lg1:flex-row flex-col relative">
+              <div class="flex lg1:flex-col flex-row lg1:justify-start justify-between">
+                <div class="bg-gray-700 relative xl3:w-128 xl3:h-112 xl2:w-120 xl2:h-104 xl1:w-112 xl1:h-96 lg5:w-120 lg5:h-104 lg4:w-112 lg4:h-96 lg3:w-96 lg3:h-80 lg2:w-88 lg2:h-72 lg1:w-76 lg1:h-64 sm2:w-1/2 w-3/5 info-odd-bg">
+                  <div class="w-full absolute lg1:left-20/100 left-10/100 top-50/100 translate-0--50/100">
+                    <img src="css/assets/img/crossword.png" alt="Crossword image">
+                  </div>
+                </div>
+                <div class="flex lg1:flex-row flex-col lg1:items-stretch items-end windows-group">
+                  <div class="xl2:w-40 xl2:h-40 xl1:w-32 xl1:h-32 lg5:w-40 lg5:h-40 lg4:w-32 lg4:h-32 w-24 h-24 bg-gray-900 text-white xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-sm sm2:text-xs text-2xs flex flex-col justify-center items-center">
+                      <span class="font-bold">Suitable for</span>
+                      <span>All ages!</span>
+                  </div>
+                  <div class="xl2:w-28 xl2:h-28 xl1:w-20 xl1:h-20 lg5:w-28 lg5:h-28 lg4:w-20 lg4:h-20 w-16 h-16 bg-c-red text-white xl2:text-base xl1:text-sm lg5:text-base lg4:text-sm lg2:text-xs sm2:text-2xs text-3xs flex flex-col justify-center items-center lg1:transform-none translate--90/100-0">
+                      <span class="font-bold">Difficulty</span>
+                      <span>Multiple</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm relative">
+                <div class="absolute left-0 top-0 text-white bg-black xl2:w-40 xl1:w-36 lg5:w-40 lg4:w-36 w-28 lg4:h-10 h-8 lg1:flex hidden justify-center items-center">
+                  <div class="mr-2">
+                    <img src="css/assets/img/icons/information.png" alt="Info icon" class="lg4:w-4 w-3 h-auto">
+                  </div>
+                  <div>
+                    <span class="xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm font-bold">Information</span>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="h-27 w-7 text-white bg-gray-900 lg1:hidden flex flex-col justify-between items-center">
+                    <div class="p-2">
+                      <img src="css/assets/img/icons/information.png" alt="Info icon" class="w-3 h-auto">
+                    </div>
+                    <div class="translate--50/100-0Xrotate90">
+                      <span class="text-sm font-bold">Information</span>
+                    </div>
+                  </div>
+                  <div class="lg1:flex-auto flex-1 xl3:pr-16 xl3:pl-41.6 xl2:pr-12 xl2:pl-36 xl1:pr-10 xl1:pl-32.4 lg5:pr-12 lg5:pl-36 lg4:pr-10 lg4:pl-32.4 lg3:pr-8 lg3:pl-27.2 lg2:pr-6 lg2:pl-23.6 lg1:pr-6 lg1:pl-21.2 sm2:px-8 px-4 xl2:pt-28 xl1:pt-20 lg5:pt-28 lg4:pt-20 lg3:pt-16 lg1:pt-12 sm2:pt-6 pt-2">
+                    <h1 class="font-bold xl2:text-3xl xl1:text-2xl lg5:text-3xl lg4:text-2xl lg2:text-xl text-lg xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      Crossword Generator
+                    </h1>
+                    <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1 italic">
+                      The Crossword Puzzle consists of a grid of squares and blanks into which words crossing vertically and horizontally are written according to clues.
+                    </p>
+                    <p>
+                      Based on the number of clues, you can generate all kinds of difficulties for this Crossword Generator. You can create the puzzle as easy or as difficult you want.
+                    </p>
+                    <button class="rounded-none focus:outline-none bg-c-red-5 text-white hover:bg-c-red-3 transition-colors duration-200 flex ml-auto xl2:mt-28 xl1:mt-20 lg5:mt-28 lg4:mt-20 lg3:mt-16 lg2:mt-12 lg1:mt-10 mt-6">
+                        <a href="crossword.html" class="xl2:px-4 xl1:px-3 lg5:px-4 lg4:px-3 lg4:py-2 px-2 py-1">
+                          Generate Puzzle!
+                        </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </article>
+
+      <article id="section-4" class="relative xl1:pt-0 lg4:pt-16 lg2:pt-14 pt-12 xl2:pb-22 xl1:pb-16">
+        <div class="absolute inset-0 opacity-25">
+          <div class="w-full h-full flex flex-col items-end">
+            <div class="h-5/100"></div>
+            <div class="w-9/12 bg-gray-300 h-55/100"></div>
+            <div class="w-7/12 bg-gray-200 h-20/100"></div>
+            <div class="w-5/12 bg-gray-300 h-10/100"></div>
+          </div>
+        </div>
+        <div class="relative flex lg1:flex-row flex-col">
+                 <div class="lg1:order-1 order-2 flex flex-1">
+                   <div class="flex">
+                     <div class="lg4:w-2 w-1 h-50/100 bg-gray-600"></div>
+                     <div class="xl2:h-34 xl1:h-32 lg5:h-34 lg4:h-32 lg2:h-30 h-27 lg4:w-9 w-7 lg4:mt-5 mt-2 text-white bg-gray-900 flex flex-col justify-between items-center">
+                       <div class="p-2">
+                         <img src="css/assets/img/icons/information.png" alt="Info icon" class="lg4:w-4 w-3 h-auto">
+                       </div>
+                       <div class="translate--50/100-0Xrotate90">
+                         <span class="xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm font-bold">Information</span>
+                       </div>
+                     </div>
+                   </div>
+                   <div class="flex-1 xl3:pl-10 xl3:pr-26 xl2:pl-8 xl2:pr-24 xl1:pl-8 xl1:pr-20 lg5:pl-8 lg5:pr-24 lg4:pl-8 lg4:pr-20 lg2:pl-6 lg2:pr-18 lg1:pl-4 lg1:pr-16 sm2:px-8 px-4 xl2:pt-12 xl1:pt-8 lg5:pt-12 lg4:pt-8 lg3:pt-6 lg1:pt-4 sm2:pt-8 pt-6 xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm">
+                     <h1 class="font-bold xl2:text-3xl xl1:text-2xl lg5:text-3xl lg4:text-2xl lg2:text-xl text-lg xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      Word Search Generator [v1]
+                     </h1>
+                     <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1 italic">
+                      Word Search consists of the letters of words placed in a grid, which usually has a rectangular or square shape. The objective of the puzzle is to find and mark all the words hidden inside the box based on the clues given.
+                     </p>
+                     <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      You can use this Word Search Generator to generate both square and rectangular grids. You have a freedom to choose any grid size you want.
+                     </p>
+                     <p>
+                      The version 1 of the Word Search Generator circles the words given in the clues.
+                     </p>
+                     <button class="rounded-none focus:outline-none bg-c-green-9 text-white hover:bg-c-green-10 transition-colors duration-200 flex ml-auto xl2:mt-20 xl1:mt-16 lg5:mt-20 lg4:mt-16 lg3:mt-12 lg2:mt-10 lg1:mt-8 mt-6">
+                       <a href="word-search-v1.html" class="xl2:px-4 xl1:px-3 lg5:px-4 lg4:px-3 lg4:py-2 px-2 py-1">
+                         Generate Puzzle!
+                       </a>
+                     </button>
+                   </div>
+                 </div>
+                 <div class="lg1:order-2 order-1 flex lg1:flex-col flex-row lg1:justify-start justify-between">
+                    <div class="lg1:order-1 order-2 bg-gray-700 relative xl3:w-136 xl3:h-64 xl2:w-124 xl2:h-52 xl1:w-116 xl1:h-48 lg5:w-124 lg5:h-52 lg4:w-116 lg4:h-48 lg3:w-100 lg3:h-44 lg2:w-92 lg2:h-40 lg1:w-80 lg1:h-36 sm2:w-55/100 w-3/5 info-even-bg">
+                      <div class="w-full absolute xl2:top-16 xl2:right-16 xl1:top-12 xl1:right-12 lg5:top-16 lg5:right-16 lg1:top-12 lg1:right-12 top-6 right-6">
+                        <img src="css/assets/img/word-search-v1.png" alt="Word Search image v1">
+                      </div>
+                    </div>
+                    <div class="lg1:order-2 order-1 lg4:mt-28 lg1:mt-20 flex lg1:flex-row flex-col lg1:justify-end lg1:pt-0 pt-2 windows-group">
+                      <div class="lg1:order-1 order-2 xl2:w-40 xl2:h-40 xl1:w-32 xl1:h-32 lg5:w-40 lg5:h-40 lg4:w-32 lg4:h-32 w-24 h-24 bg-c-green-10 text-white xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-sm sm2:text-xs text-2xs flex flex-col justify-center items-center lg4:mt-10 lg1:mt-6">
+                         <span class="font-bold">Suitable for</span>
+                         <span>All ages!</span>
+                      </div>
+                      <div class="lg1:order-2 order-1 xl2:w-28 xl2:h-28 xl1:w-20 xl1:h-20 lg5:w-28 lg5:h-28 lg4:w-20 lg4:h-20 w-16 h-16 bg-gray-900 text-white xl2:text-base xl1:text-sm lg5:text-base lg4:text-sm lg2:text-xs sm2:text-2xs text-3xs flex flex-col justify-center items-center">
+                         <span class="font-bold">Difficulty</span>
+                         <span>Multiple</span>
+                      </div>
+                    </div>
+                 </div>
+        </div>
+      </article>
+
+      <article id="section-5" class="relative xl1:pt-0 lg4:pt-16 lg2:pt-14 pt-12 xl2:pb-22 xl1:pb-16 lg5:pb-22 lg4:pb-16 lg2:pb-14 pb-12">
+          <div class="absolute inset-0 opacity-25">
+            <div class="w-full flex flex-col h-full">
+              <div class="w-7/12 bg-gray-400 h-10/100"></div>
+              <div class="h-50/100"></div>
+              <div class="w-6/12 bg-gray-500 h-20/100"></div>
+              <div class="w-5/12 bg-gray-400 h-20/100"></div>
+            </div>
+          </div>
+          <div class="flex lg1:flex-row flex-col relative">
+              <div class="flex lg1:flex-col flex-row lg1:justify-start justify-between">
+                <div class="bg-gray-700 relative xl3:w-128 xl3:h-112 xl2:w-120 xl2:h-104 xl1:w-112 xl1:h-96 lg5:w-120 lg5:h-104 lg4:w-112 lg4:h-96 lg3:w-96 lg3:h-80 lg2:w-88 lg2:h-72 lg1:w-76 lg1:h-64 sm2:w-1/2 w-3/5 info-odd-bg">
+                  <div class="w-full absolute lg1:left-20/100 left-10/100 top-50/100 translate-0--50/100">
+                    <img src="css/assets/img/word-search-v2.png" alt="Word Search image v2">
+                  </div>
+                </div>
+                <div class="flex lg1:flex-row flex-col lg1:items-stretch items-end windows-group">
+                  <div class="xl2:w-40 xl2:h-40 xl1:w-32 xl1:h-32 lg5:w-40 lg5:h-40 lg4:w-32 lg4:h-32 w-24 h-24 bg-gray-900 text-white xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-sm sm2:text-xs text-2xs flex flex-col justify-center items-center">
+                      <span class="font-bold">Suitable for</span>
+                      <span>All ages!</span>
+                  </div>
+                  <div class="xl2:w-28 xl2:h-28 xl1:w-20 xl1:h-20 lg5:w-28 lg5:h-28 lg4:w-20 lg4:h-20 w-16 h-16 bg-c-red text-white xl2:text-base xl1:text-sm lg5:text-base lg4:text-sm lg2:text-xs sm2:text-2xs text-3xs flex flex-col justify-center items-center lg1:transform-none translate--90/100-0">
+                      <span class="font-bold">Difficulty</span>
+                      <span>Multiple</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm relative">
+                <div class="absolute left-0 top-0 text-white bg-black xl2:w-40 xl1:w-36 lg5:w-40 lg4:w-36 w-28 lg4:h-10 h-8 lg1:flex hidden justify-center items-center">
+                  <div class="mr-2">
+                    <img src="css/assets/img/icons/information.png" alt="Info icon" class="lg4:w-4 w-3 h-auto">
+                  </div>
+                  <div>
+                    <span class="xl2:text-lg xl1:text-md lg5:text-lg lg4:text-md lg2:text-base text-sm font-bold">Information</span>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="h-27 w-7 text-white bg-gray-900 lg1:hidden flex flex-col justify-between items-center">
+                    <div class="p-2">
+                      <img src="css/assets/img/icons/information.png" alt="Info icon" class="w-3 h-auto">
+                    </div>
+                    <div class="translate--50/100-0Xrotate90">
+                      <span class="text-sm font-bold">Information</span>
+                    </div>
+                  </div>
+                  <div class="lg1:flex-auto flex-1 xl3:pr-16 xl3:pl-41.6 xl2:pr-12 xl2:pl-36 xl1:pr-10 xl1:pl-32.4 lg5:pr-12 lg5:pl-36 lg4:pr-10 lg4:pl-32.4 lg3:pr-8 lg3:pl-27.2 lg2:pr-6 lg2:pl-23.6 lg1:pr-6 lg1:pl-21.2 sm2:px-8 px-4 xl2:pt-28 xl1:pt-20 lg5:pt-28 lg4:pt-20 lg3:pt-16 lg1:pt-12 sm2:pt-6 pt-2">
+                    <h1 class="font-bold xl2:text-3xl xl1:text-2xl lg5:text-3xl lg4:text-2xl lg2:text-xl text-lg xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      Word Search Generator [v2]
+                    </h1>
+                    <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1 italic">
+                      Word Search consists of the letters of words placed in a grid, which usually has a rectangular or square shape. The objective of the puzzle is to find and mark all the words hidden inside the box based on the clues given.
+                    </p>
+                    <p class="xl2:mb-3 xl1:mb-2 lg5:mb-3 lg2:mb-2 mb-1">
+                      You can use this Word Search Generator to generate both square and rectangular grids. You have a freedom to choose any grid size you want.
+                    </p>
+                    <p>
+                      The version 2 of the Word Search Generator highlights the words given in the clues.
+                    </p>
+                    <button class="rounded-none focus:outline-none bg-c-red-5 text-white hover:bg-c-red-3 transition-colors duration-200 flex ml-auto xl2:mt-28 xl1:mt-20 lg5:mt-28 lg4:mt-20 lg3:mt-16 lg2:mt-12 lg1:mt-10 mt-6">
+                        <a href="word-search-v2.html" class="xl2:px-4 xl1:px-3 lg5:px-4 lg4:px-3 lg4:py-2 px-2 py-1">
+                          Generate Puzzle!
+                        </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </article>
+    </div>
+  </div>
+  <footer class="xl1:ml-auto xl1:w-5*100/6 px-3 xl2:py-6 xl1:py-4 lg5:py-6 lg4:py-4 py-3 bg-c-blue-12">
+      <div class="xl2:text-md xl1:text-base lg5:text-md lg4:text-base lg2:text-sm text-xs text-center">
+        <img class="inline-block sm1:mr-2 mr-1 lg4:w-4 w-3 h-auto" src="css/assets/img/icons/paypal.png" alt="PayPal icon">
+        <b>PLEASE, DONATE!</b>
+        If you like the project, please consider 
+        <a href="https://paypal.me/abdullah761990" target="_blank"><b>contributing</b></a>!
+      </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <script src="js/zenscroll-latest/zenscroll-min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+</html>

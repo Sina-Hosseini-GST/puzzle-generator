@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <script src="libraries/p5.min.js"></script>
+  <script src="sketch.js"></script>
+  <script src="script.js"></script>
+  <script src="Crossword.js"></script>
+
+
+
+</head>
+
+<body>
+  <div style="display: flex;">
+
+
+    <div style="background-color: rgb(231, 171, 171); min-width: 520px; margin-right: 20px; overflow-y: auto;">
+      <input id="header-input" type="text" placeholder="Header" style="width: 100px;">
+      <button id="generate">Generate</button>
+      <button id="solve">Solve</button>
+      <button id="download">Download Puzzle</button>
+      <button id="download-text">Download Text</button>
+      <ul id="words-input">
+
+      </ul>
+
+
+      <button onclick="addRow()"
+        style="width: 40px; height:40px; font-size: 30px; margin:  0 auto; display: block;">&#43;</button>
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <div id="header" style="margin-bottom: 10px; font-size: 20px; align-self: center;"></div>
+      <div id="canvasContainer"></div>
+
+      <div style="display: flex;">
+        <div style="width: fit-content;padding-right: 10px;">
+          <b style="text-decoration: underline;">Across</b>
+          <ul id="across">
+          </ul>
+
+        </div>
+        <div style="width: fit-content; ">
+          <b style="text-decoration: underline;">Down</b>
+          <ul id="down">
+          </ul>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+<style>
+  html,
+  body {
+    font-family: 'Poppins';
+  }
+
+  input[name="answer"] {
+    width: 100px;
+  }
+
+  input[name="hint"] {
+    width: 300px;
+  }
+
+  li {
+    padding: 5px;
+    white-space: nowrap;
+  }
+
+  #down,
+  li #across,
+  li {
+    padding: 1px;
+    display: block;
+
+  }
+
+
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+
+<script>
+
+  function addRow() {
+    var list = document.getElementById('words-input');
+    markup = `
+    <li>
+          <label>Hint</label>
+          <input name="hint" type="text">
+          <label>Answer</label>
+          <input name="answer" type="text">
+          <button onclick="removeList(this)" style="width: 20px; height:20px; font-size: 16px; padding: 0; ">&#8722;</button>
+        </li>
+    `
+    list.insertAdjacentHTML('beforeend', markup);
+  }
+
+  function removeList(e) {
+    e.parentElement.remove()
+
+  }
+  var header_input = document.getElementById('header-input')
+  header_input.onchange = function () {
+    document.getElementById("header").innerHTML = header_input.value;
+  }
+
+
+
+</script>
